@@ -25,12 +25,10 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        // tìm file ảnh
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
       {
-        // tìm file phông chữ
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
       },

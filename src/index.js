@@ -1,5 +1,6 @@
 import { renderHome } from "./home.js";
 import { renderMenu } from "./menu.js";
+import { renderAbout } from "./about.js";
 
 const header = document.querySelector("header");
 const nav = document.querySelector("nav");
@@ -49,8 +50,8 @@ aboutBtn.addEventListener("click", () => {
   menuBtn.classList.remove("active");
   aboutBtn.classList.add("active");
 
-  editContent();
-  // renderAbout();
+  editContent("about-content");
+  renderAbout();
 });
 
 homeBtn.click();
