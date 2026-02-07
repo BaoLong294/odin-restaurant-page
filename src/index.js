@@ -1,4 +1,5 @@
 import { renderHome } from "./home.js";
+import { renderMenu } from "./menu.js";
 
 const header = document.querySelector("header");
 const nav = document.querySelector("nav");
@@ -19,4 +20,37 @@ const aboutBtn = document.createElement("button");
 aboutBtn.textContent = "About";
 nav.append(homeBtn, menuBtn, aboutBtn);
 
-renderHome();
+function editContent(className) {
+  const content = document.querySelector("#content");
+  content.innerHTML = "";
+  content.className = className;
+}
+
+homeBtn.addEventListener("click", () => {
+  menuBtn.classList.remove("active");
+  aboutBtn.classList.remove("active");
+  homeBtn.classList.add("active");
+
+  editContent("home-content");
+  renderHome();
+});
+
+menuBtn.addEventListener("click", () => {
+  homeBtn.classList.remove("active");
+  aboutBtn.classList.remove("active");
+  menuBtn.classList.add("active");
+
+  editContent("menu-content");
+  renderMenu();
+});
+
+aboutBtn.addEventListener("click", () => {
+  homeBtn.classList.remove("active");
+  menuBtn.classList.remove("active");
+  aboutBtn.classList.add("active");
+
+  editContent();
+  // renderAbout();
+});
+
+homeBtn.click();
