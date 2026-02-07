@@ -207,6 +207,8 @@ header nav button.active {
   padding-top: 50px;
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 90px;
 }
 
@@ -217,6 +219,7 @@ header nav button.active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: calc(100vh - 51px);
 }
 
 #content.about-content h1 {
@@ -236,7 +239,7 @@ header nav button.active {
 
 #content.about-content .about-sign {
   font-family:
-    "Alex Brush",
+    "Alexbrush",
     "Dancing Script",
     "Cursive",
     system-ui,
