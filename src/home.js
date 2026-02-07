@@ -1,18 +1,29 @@
-const header = document.querySelector("header");
-const nav = document.querySelector("nav");
-const content = document.querySelector("#content");
+import homeImg from "./img/home.png";
 
-const name = document.createElement("p");
-name.textContent = "The Golden Spoon";
-header.insertBefore(name, nav);
+export function renderHome() {
+  const content = document.querySelector("#content");
 
-const rightNav = document.createElement("div");
-header.appendChild(rightNav);
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("home-wrapper");
 
-const homeBtn = document.createElement("button");
-homeBtn.textContent = "Home";
-const menuBtn = document.createElement("button");
-menuBtn.textContent = "Menu";
-const aboutBtn = document.createElement("button");
-aboutBtn.textContent = "About";
-nav.append(homeBtn, menuBtn, aboutBtn);
+  const textWrapper = document.createElement("div");
+  textWrapper.classList.add("text-wrapper");
+
+  const title = document.createElement("h1");
+  title.classList.add("home-title");
+  title.textContent = "Experience Culinary Excellence";
+
+  const description = document.createElement("p");
+  description.classList.add("home-description");
+  description.textContent =
+    "Savor exquisite flavors in the heart of curated elegance.";
+
+  textWrapper.append(title, description);
+
+  const image = document.createElement("img");
+  image.src = homeImg;
+  image.classList.add("home-image");
+
+  wrapper.append(textWrapper, image);
+  content.appendChild(wrapper);
+}
