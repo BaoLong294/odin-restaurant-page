@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./font/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbfaee;
+}
+
+header {
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    Helvetica,
+    Arial,
+    sans-serif;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #9a844a;
+  position: fixed;
+  z-index: 10;
+}
+
+header p,
+header div {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*     border: 1px solid black; */
+}
+
+header nav button {
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+header nav button:hover {
+  color: #9a844a;
+}
